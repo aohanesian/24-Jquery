@@ -2,7 +2,7 @@ const URL = `https://raw.githubusercontent.com/brightestsirius/Front-end-Pro-19/
 
 const renderTiles = (data) => {
     $(data).each((index, item) => {
-        let span = $('<span/>').css('background-color', `${item.color}`).attr('class', 'tile');
+        let span = $('<span/>').css('background-color', `${item.color}`).addClass('tile');
         $(`#colorPicker`).append(span);
         span.on(`click`, () => {
             renderPic(item);
